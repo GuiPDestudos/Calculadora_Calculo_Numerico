@@ -159,6 +159,7 @@ while True:
     
     elif op == '8':
         print('Saindo...')
+        print('\033[1;32mPrograma encerrado!\033[m')
         break
     
     else:
