@@ -27,6 +27,7 @@ while True:
     
     if op == '1':
        print('\033[1;33mErro Absoluto\033[m\n')
+       print('\033[1;35merro_abs=|x_exato - x_aprox|\033[m\n')
        x_exato = float(input('Digite o valor exato: '))
        x_aprox = float(input('Digite o valor aproximado: '))
        erro_abs = abs(x_exato - x_aprox)
@@ -45,6 +46,7 @@ while True:
 
     elif op == '2':
         print('\033[1;33mErro Relativo\033[m\n')
+        print('\033[1;35merrorel=|x_exato - x_aprox|/|x_exato|\033[m\n')
         xexato = float(input('Digite o valor exato: '))
         xaprox = float(input('Digite o valor aproximado: '))
         if xexato == 0:
@@ -69,6 +71,7 @@ while True:
     
     elif op == '3':
       print('\033[1;33mSistema de Equações Lineares\033[m\n')
+      print('\033[1;35ma1+b1=c1\na2+b2=c2\033[m\n')
       a1 = float(input('Digite o valor de a1: '))
       b1 = float(input('Digite o valor de b1: '))
       c1 = float(input('Digite o valor de c1: '))
@@ -105,12 +108,14 @@ while True:
 
     elif op == '4':
         print('\033[1;33mArredondamento\033[m\n')
+        print('\033[1;35mEx: 15.55--->15.6\n\033[m')
         num = float(input('Digite o número: '))
         casas = int(input('Digite o número de casas decimais: '))
         print(f'O número arredondado é \033[31m{round(num, casas)}\033[m\n')
     
     elif op == '5':
         print('\033[1;33mTruncamento\033[m\n')
+        print('\033[1;35mEx: 15.55--->15.5\n\033[m')
         num = float(input('Digite o número: '))
         casas = int(input('Digite o número de casas decimais: '))
         trunc = math.trunc(num * 10 ** casas) / (10 ** casas)
@@ -118,6 +123,7 @@ while True:
     
     elif op == '6':
         print('\033[1;33mOperações com Pontos Flutuantes\033[m\n')
+        print('\033[1;35mx=m*b^e\n\033[m')
         m = float(input('Digite o valor de m: '))
         b = float(input('Digite o valor de b: '))
         e = float(input('Digite o valor de e: '))
@@ -137,6 +143,7 @@ while True:
 
     elif op == '7':
         print('\033[1;33mMétodo da Bisseção\033[m\n')
+        print('\033[1;35mf(a)*f(b)<0\n\033[m')
         a = float(input('Digite o valor de a: '))
         b = float(input('Digite o valor de b: '))
         tol = float(input('Digite a tolerância: '))
