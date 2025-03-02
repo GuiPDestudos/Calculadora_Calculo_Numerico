@@ -8,11 +8,11 @@ print("-" * 20)
 
 init_cal = input('Deseja iniciar a calculadora? [S/N] ').strip().upper()
 if init_cal == 'N':
-    print('\033[1;31mPrograma encerrado!\033[m')
+    print('\033[1;32mPrograma encerrado!\033[m')
     exit()
 
 while True:
-    print('Calculadora iniciada!')
+    print('\n\033[1;32mCalculadora iniciada\033[m\n')
     print('Selecione a operação desejada:')
     print('''[1] Erro Absoluto
 [2] Erro Relativo
@@ -26,7 +26,7 @@ while True:
     op = input('Qual opção escolhida: ').strip()
     
     if op == '1':
-       print('\033[1;33mErro Absoluto\033[m')
+       print('\033[1;33mErro Absoluto\033[m\n')
        x_exato = float(input('Digite o valor exato: '))
        x_aprox = float(input('Digite o valor aproximado: '))
        erro_abs = abs(x_exato - x_aprox)
@@ -44,7 +44,7 @@ while True:
        fig.show()
 
     elif op == '2':
-        print('\033[1;33mErro Relativo\033[m')
+        print('\033[1;33mErro Relativo\033[m\n')
         xexato = float(input('Digite o valor exato: '))
         xaprox = float(input('Digite o valor aproximado: '))
         if xexato == 0:
@@ -68,7 +68,7 @@ while True:
             fig.show()
     
     elif op == '3':
-      print('\033[1;33mSistema de Equações Lineares\033[m')
+      print('\033[1;33mSistema de Equações Lineares\033[m\n')
       a1 = float(input('Digite o valor de a1: '))
       b1 = float(input('Digite o valor de b1: '))
       c1 = float(input('Digite o valor de c1: '))
@@ -90,7 +90,7 @@ while True:
         y1_vals = (c1 - a1 * x_vals) / b1 if b1 != 0 else np.full_like(x_vals, c1 / a1)
         y2_vals = (c2 - a2 * x_vals) / b2 if b2 != 0 else np.full_like(x_vals, c2 / a2)
 
-        # Grfico
+        # Gráfico
         fig.plot(x_vals, y1_vals, label=f'{a1}x + {b1}y = {c1}', linestyle='-', color='blue')
         fig.plot(x_vals, y2_vals, label=f'{a2}x + {b2}y = {c2}', linestyle='-', color='green')
         fig.scatter(x_sol, y_sol, color='red', zorder=3, label=f'Solução ({x_sol:.2f}, {y_sol:.2f})')
@@ -104,20 +104,20 @@ while True:
         fig.show()
 
     elif op == '4':
-        print('\033[1;33mArredondamento\033[m')
+        print('\033[1;33mArredondamento\033[m\n')
         num = float(input('Digite o número: '))
         casas = int(input('Digite o número de casas decimais: '))
         print(f'O número arredondado é \033[31m{round(num, casas)}\033[m\n')
     
     elif op == '5':
-        print('\033[1;33mTruncamento\033[m')
+        print('\033[1;33mTruncamento\033[m\n')
         num = float(input('Digite o número: '))
         casas = int(input('Digite o número de casas decimais: '))
         trunc = math.trunc(num * 10 ** casas) / (10 ** casas)
         print(f'O número truncado é \033[31m{trunc}\033[m\n')
     
     elif op == '6':
-        print('\033[1;33mOperações com Pontos Flutuantes\033[m')
+        print('\033[1;33mOperações com Pontos Flutuantes\033[m\n')
         m = float(input('Digite o valor de m: '))
         b = float(input('Digite o valor de b: '))
         e = float(input('Digite o valor de e: '))
@@ -136,7 +136,7 @@ while True:
         fig.show()
 
     elif op == '7':
-        print('\033[1;33mMétodo da Bisseção\033[m')
+        print('\033[1;33mMétodo da Bisseção\033[m\n')
         a = float(input('Digite o valor de a: '))
         b = float(input('Digite o valor de b: '))
         tol = float(input('Digite a tolerância: '))
@@ -158,7 +158,7 @@ while True:
             print(f'A raiz é \033[31m{p}\033[m\n')
     
     elif op == '8':
-        print('Saindo...')
+        print('\033[1;37mSaindo...\033[m\n')
         print('\033[1;32mPrograma encerrado!\033[m')
         break
     
